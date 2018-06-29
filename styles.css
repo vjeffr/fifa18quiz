@@ -1,0 +1,222 @@
+/*
+mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+
+
+/* THIS LINE LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/* Start your base/mobile styles here */
+
+.container {
+  max-width: 750px;
+  padding: 10px;
+  margin: 10% auto 10% auto;
+  height: auto;
+}
+
+
+.article-text {
+  padding: 40px 0px 40px 0px;
+  height: auto;
+}
+
+
+.test, .testHeader, .blurb, .methodology {
+  padding: 10px;
+  margin: 10px 20px 10px 20px;
+  height: auto;
+  border: 2px;
+  border-color: black;
+  border-style: solid;
+  font-family: 'Helvetica', sans-serif;
+}
+
+.test {
+  background-color: #cce0ff;
+}
+
+.testHeader {
+font-size: 1.6em;
+font-weight: bold;
+text-align: center;
+background-color: #f1e8d9;
+}
+
+.button {
+  margin: 20px 0px 0px 0px;
+}
+
+.result {
+  background-color: #cce0ff;
+}
+
+.results {
+  padding: 10px 0px 10px 0px;
+  font-family: 'Helvetica', sans-serif;
+}
+
+.byline, #credit, .caption{
+  font-size: 1em;
+}
+
+#credit, .caption{
+font-family: 'Helvetica', sans-serif;
+}
+
+.hold-image {
+  position: relative;
+  max-width: 100%;
+  margin: 10px 0px 0px 0px;
+}
+
+.hold-image img {
+  width: 100%;
+}
+
+#credit {
+  color: #625D5D;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+cite {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+blockquote {
+  font-family: 'PT Sans Narrow', sans-serif;
+  width: 75%;
+  text-align: center;
+  padding: 0px;
+  margin: 30px auto 30px auto;
+  font-size: 1.3em;
+  line-height: 1.8em;
+  position: relative;
+}
+
+  blockquote p::before, blockquote p::after {
+    font-size: 5em;
+    color: #D07E50;
+    font-family: 'arial';
+    position: absolute;
+  }
+
+  blockquote p::before {
+    content: '\201c';
+    display: inline-block;
+    padding-right: 10px;
+    left: -20px;
+  }
+
+  blockquote p::after {
+    content: '\201d';
+    padding-left: 5px;
+    bottom: 95px;
+  }
+
+  blockquote footer cite {
+  font-family: 'Helvetica', sans-serif;
+  font-size: .8em;
+  font-style: normal;
+  line-height: 1.2em;
+  text-align: right;
+  color: #888;
+  padding-top: 20px;
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+}
+
+
+.question {
+  width: 100%;
+  height: 100vh;
+  background-color: #C0C0C0;
+  padding: 10px;
+  display: none;
+  margin: 0 auto;
+}
+
+.result {
+  width: 100%;
+  height: 100vh;
+  background-color: 	#C0C0C0;
+  padding: 10px;
+  display: none;
+  margin: 0 auto;
+}
+
+.question.active, .result.active{
+  display: block;
+}
+
+.result.active{
+  display: block;
+  /* max-width: 50%; */
+  /* height: 40vh; */
+}
+
+.question p{
+  font-size: 2em;
+  line-height: 1.2em;
+}
+
+/* Tablet/Desktop overrides */
+
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here. Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+
+  blockquote {
+    width: 80%;
+    font-size: 1.6em;
+  }
+  blockquote p::before {
+    left: 25px;
+  }
+}
+
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
+
+
+blockquote {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+
+  blockquote p::before {
+    left: -45px;
+  }
+
+
+  blockquote footer cite {
+    position: relative;
+    right: 100px;
+    font-size: .75em;
+  }
+
+}
