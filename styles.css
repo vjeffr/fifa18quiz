@@ -14,11 +14,15 @@ You will find this is far easier than the opposite task of using CSS to cram you
 
 /* Start your base/mobile styles here */
 
-.container {
+.container, .containtest {
   max-width: 750px;
   padding: 10px;
   margin: 10% auto 10% auto;
   height: auto;
+}
+
+.containtest {
+  text-align: center;
 }
 
 
