@@ -26,29 +26,30 @@ function scrollToElement(element){
 function calculateResults(){
   var yes = $("[value='yes']:checked").length,
   no = $("[value='no']:checked").length;
-  // This is the code for headache
+  // This is the code for yesno
+
       if (yes === 0){
-        $("#headache").find("span").text("0/10 correct.");
+        $("#yesno").find("span").text("Incorrect");
       } else if (yes === 1){
-        $("#headache").find("span").text("1/10 correct");
+        $("#yesno").find("span").text("Correct");
       } else if (yes === 2){
-        $("#headache").find("span").text("2/10 correct");
+        $("#yesno").find("span").text("2/10 correct");
       } else if (yes === 3){
-        $("#headache").find("span").text("3/10 correct");
+        $("#yesno").find("span").text("3/10 correct");
       } else if (yes === 4){
-        $("#headache").find("span").text("4/10 correct");
+        $("#yesno").find("span").text("4/10 correct");
       } else if (yes === 5){
-        $("#headache").find("span").text("5/10 correct");
+        $("#yesno").find("span").text("5/10 correct");
       } else if (yes === 6){
-        $("#headache").find("span").text("6/10 correct");
+        $("#yesno").find("span").text("6/10 correct");
       } else if (yes === 7){
-        $("#headache").find("span").text("7/10 correct");
+        $("#yesno").find("span").text("7/10 correct");
       } else if (yes === 8){
-        $("#headache").find("span").text("8/10 correct");
+        $("#yesno").find("span").text("8/10 correct");
       } else if (yes === 9){
-        $("#headache").find("span").text("9/10 correct");
+        $("#yesno").find("span").text("9/10 correct");
       } else {
-        $("#headache").find("span").text("10/10 correct. Congratulations!");
+        $("#yesno").find("span").text("10/10 correct. Congratulations!");
       }
 
 }
