@@ -17,12 +17,16 @@ You will find this is far easier than the opposite task of using CSS to cram you
 .container, .containtest {
   max-width: 750px;
   padding: 10px;
-  margin: 10% auto 10% auto;
   height: auto;
+  font-family: 'Alegreya+Sans_SC', sans-serif;
+}
+
+.container {
+  margin: 10% auto 10% auto;
 }
 
 .containtest {
-  text-align: center;
+margin: 20px
 }
 
 
